@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+  app:
+    build: .
+    volumes:
+      - ./configs:/root/devops_start/configs
+  
+  web:
+    image: nginx:alpine
+    ports:
+      - "8081:80"
